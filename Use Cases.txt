@@ -1,0 +1,3 @@
+UC 1. CFT for event based trigger on S3 using lambda also run test cases using pytest and generate report in Jenkins.
+
+UC 2. Create a DynamoDB table with dummy data, perform CRUD operations using boto3 resource/client API calls.

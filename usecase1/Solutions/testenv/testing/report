@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="Prathmeshs-MacBook-Air.local" name="pytest" skipped="0" tests="5" time="0.068" timestamp="2020-04-03T10:12:05.565576"><testcase classname="test_calculator" file="test_calculator.py" line="8" name="test_add" time="0.001"></testcase><testcase classname="test_calculator" file="test_calculator.py" line="13" name="test_subtract" time="0.001"></testcase><testcase classname="test_calculator" file="test_calculator.py" line="18" name="test_subtract_negative" time="0.001"></testcase><testcase classname="test_calculator" file="test_calculator.py" line="23" name="test_multiply" time="0.001"></testcase><testcase classname="test_calculator" file="test_calculator.py" line="28" name="test_divide" time="0.001"><failure message="assert None == 1.5">def test_divide():
+        value = calculator.divide(NUMBER_1, NUMBER_2)
+&gt;       assert value == 1.5
+E       assert None == 1.5
+
+test_calculator.py:31: AssertionError</failure></testcase></testsuite></testsuites>
