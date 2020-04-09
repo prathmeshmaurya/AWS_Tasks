@@ -1,0 +1,3 @@
+AWS Lambda is essentially code execution in the cloud. Gives the ability to run code without concerning about anything else.
+
+Lambda allows you to define various triggers which can be hundreds of different events provided by dozens of different event sources. These events can then be subscribed to act as a trigger to kick off one or more Lambda functions. In our case, we’re going to use the S3 event provider. One of the most common event providers to act as Lambda triggers is the S3 service. Events are being fired all of the time in S3 from new files that are uploaded to buckets, files being moved around, deleted, etc. All of this activity fires events of various types in real-time in S3.
