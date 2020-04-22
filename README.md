@@ -1,8 +1,7 @@
 
 # Use case assignments for AWS.
 
-###### Use Case : 1
-Part : 1
+## Use Case : 1
 Tasks involved in this part are as follows:
 
 a). Writing a cloudformation template to create a stack with an AWS S3 Bucket resource.
