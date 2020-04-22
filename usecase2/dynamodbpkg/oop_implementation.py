@@ -20,9 +20,9 @@ class DecimalEncoder(json.JSONEncoder):
 class DynamoOps:
     tables = []
 
-    def __init__(self, is_local=True):
+    def __init__(self, is_local=False):
         # To connect with DynamoDB local
-        if is_local:
+        if is_local == False:
             self.ddb = boto3.resource('dynamodb', endpoint_url='http://localhost:8000')
         else:
             self.ddb = boto3.resource('dynamodb')
@@ -154,7 +154,7 @@ class DynamoOps:
         if self.exists_table(tbl_name):
             try:
                 table = self.ddb.Table(tbl_name)
-                response = table.delete_item(Key={pk_name:pk_value})
+                response = table.delete_item(Key={pk_name: pk_value})
                 print("Deleted Item..")
                 return response
             except ClientError as ce:
@@ -167,6 +167,7 @@ class DynamoOps:
             try:
                 table = self.ddb.Table(tbl_name)
                 response = table.delete()
+                self.tables.remove(tbl_name)
                 print("Deleted Table..")
                 return response
             except ClientError as ce:
@@ -174,7 +175,7 @@ class DynamoOps:
         else:
             print("Table doesn't exist...")
 
-    def scan_table(self, tbl_name, filter_key, filter_val):
+    def scan_table(self, tbl_name, filter_key=None, filter_val=None):
         if self.exists_table(tbl_name):
             try:
                 table = self.ddb.Table(tbl_name)
